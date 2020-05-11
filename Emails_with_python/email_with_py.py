@@ -2,11 +2,11 @@ import smtplib
 from email.message import EmailMessage
 
 email = EmailMessage()
-email['Subject'] = "This is sent using Python!"
-email['From'] = "arushiagarwalstar@gmail.com"
-email['To'] = 'arushiagarwal14@gmail.com'
+email['Subject'] =  # Your email subject
+email['From'] = # From whoever
+email['To'] = # Email id you want to send the email to
 
-email.set_content('This is a sample email')
+email.set_content('THE CONTENT OF YOUR EMAIL')
 
 try:
     with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
@@ -16,4 +16,4 @@ try:
         smtp.send_message(email)
         print("all good")
 except:
-    print("Ooopss problem!!")
+    print("Error logging in")
