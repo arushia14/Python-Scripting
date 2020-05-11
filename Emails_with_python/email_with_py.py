@@ -12,7 +12,7 @@ try:
     with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
         smtp.ehlo()
         smtp.starttls()
-        smtp.login('arry.animaget@gmail.com', 'mithi014')
+        smtp.login('YOUR EMAIL USED TO SEND', 'PASSWORD TO YOUR EMAIL ID')
         smtp.send_message(email)
         print("all good")
 except:
