@@ -1,6 +1,3 @@
-# Python-Scripting
-Some python scripting projects including Amazon price drop notifier, English dictionary, PDF and image processing, etc. 
-
 ## Price Drop Notifier
 A program that scrapes Amazon for any desired product at an interval of 6 hours, and sends you an email if that product has a drop in price.
 
