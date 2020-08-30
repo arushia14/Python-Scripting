@@ -4,10 +4,10 @@ import smtplib
 import time
 
 def price_check():
-    url = 'YOUR AMAZON PRODUCT LINK GOES HERE'
+    url = '[AMAZON PRODUCT LINK GOES HERE]'
 
     headers = {
-        'user-agent': 'YOUR USER AGENT GOES HERE' # To get your user agent, simply Google "what is my user agent"
+        'user-agent': '[USER AGENT GOES HERE]' # To get user agent, Google "what is my user agent"
     }
 
     page = requests.get(url, headers = headers)  # Requesting the content online
@@ -17,13 +17,13 @@ def price_check():
     
     ''' 
     The code below is subjective to Amazon.in where the prices are mentioned in Indian Rupees. 
-    In case of a difference region or currency, please modify according to the comments mentioned.
+    In case of a difference region or currency, can be modified according to the comments mentioned.
     '''
     
     pricefloat = price[2:-3]     # Getting the actual cost and removing the currency symbol 
     pricefloat = float(pricefloat.replace(',', ''))  # Converting the value to float from string
 
-    if pricefloat < 4000:  # 4000 here can be replaced by the price you want
+    if pricefloat < 4000:  # 4000 is the max price
         send_mail()
 
 
@@ -34,16 +34,16 @@ def send_mail():
     server.ehlo()
 
 
-    server.login('* SENDER EMAIL ID *', '* PASSWORD SENDER EMAIL *')
+    server.login('* SENDER EMAIL ID *', '[PASSWORD SENDER EMAIL]')
 
     subject = "PRODUCT PRICE DOWN!"
-    body = "The XYZ product is available for a cheaper price on Amazon. Check it out!, *ADD LINK HERE*"
+    body = "The XYZ product is available for a cheaper price on Amazon. Check it out!, [ADD LINK HERE]"
     
     mail = (f'Subject: {subject} \n\n {body}')
 
     server.sendmail(
-        '* SENDER EMAIL ID(from above) *',
-        '* RECEIVER EMAIL ID *',
+        '[SENDER EMAIL ID(from above)]',
+        '[RECEIVER EMAIL ID]',
         mail
     )
 
