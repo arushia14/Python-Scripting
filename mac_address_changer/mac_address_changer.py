@@ -13,7 +13,7 @@ def get_args():
     if not options.interface:
         parser.error("Please enter an interface. Use --help for more information.")
     elif not options.new_mac:
-        parser.error("Please enter the new MAC address. Use --help for new information.")
+        parser.error("Please enter the new MAC address. Use --help for more information.")
     return options
 
 
