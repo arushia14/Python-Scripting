@@ -9,8 +9,7 @@ MAC (Media Access Control) address is a *unique* identifier of a device. It is p
 within a network. This script can be used to change the MAC address of a device (it will be reset on reboot).
 
 When running the program, it takes 2 arguments:
--i or --interface to specify the interface
--m or --mac for the new address. 
+-i or --interface to specify the interface, and -m or --mac for the new address. 
 Additionally, -h or --help can be used to get instructions.
 
 
