@@ -21,3 +21,11 @@ Merges two PDF files
 
 ## Emails_with_python
 Automated email sender 
+
+## simplest_port_scanner
+This program shows the open ports which are accepting packets. These open ports can often cause vulnerabilities or bugs. 
+
+When running this program, it takes 3 arguments: IP address, and the start and end of range to check the ports
+
+Example (running from terminal in linux)-
+python3 simplest_port_scanner.py 192.168.1.1 30 90
