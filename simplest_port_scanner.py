@@ -1,13 +1,17 @@
+#!/bin/python
+
 import sys
 import socket
 from datetime import datetime
 
 # Define the target
-if len(sys.argv) == 2:
+if len(sys.argv) == 4:
 	target = socket.gethostbyname(sys.argv[1]) # Translate hostname to IPv4 
+	start_range = int(sys.argv[2])             # Defining the start of the range
+	end_range = int(sys.argv[3])               # Defining the end of the range of search
 else:
 	print("Invalid number of arguments")
-	print("Expected syntax: python3 scanner.py <ip address>")
+	print("Expected syntax: python3 scanner.py <ip address> start_range end_range")
 
 # Adding a banner
 print('-' * 50)
@@ -16,7 +20,7 @@ print('Time started: ' + str(datetime.now()))
 print('-' * 50)
 
 try: 
-	for port in range(50,85):
+	for port in range(start_range, end_range):
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket.setdefaulttimeout(1)
 		result = s.connect_ex((target,port)) # Returns an error indicator
