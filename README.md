@@ -12,7 +12,6 @@ When running the program, it takes 2 arguments:
 -i or --interface to specify the interface, and -m or --mac for the new address. 
 Additionally, -h or --help can be used to get instructions.
 
-
 ## JPG_to_PNG
 Converts a .jpeg image to .png
 
@@ -29,3 +28,6 @@ When running this program, it takes 3 arguments: IP address, and the start and e
 
 Example (running from terminal in linux)-
 python3 simplest_port_scanner.py 192.168.1.1 30 90
+
+## Py-ssword
+This is inspired by Safari browser's password suggestions. This is a script that suggests secure passwords for you as per what inputs you provide.
